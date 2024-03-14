@@ -1,0 +1,7 @@
+@use 'vuetify/settings' with (
+  $rounded: (
+    "1_5": 6px,
+    3: 12px,
+    9: 36px
+  )
+);
