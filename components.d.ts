@@ -7,14 +7,11 @@ export {}
 
 declare module 'vue' {
   export interface GlobalComponents {
-    HelloWorld: typeof import('./src/components/HelloWorld.vue')['default']
     VitaButton: typeof import('./src/components/ui/VitaButton.vue')['default']
     VitaCard: typeof import('./src/components/VitaCard.vue')['default']
     VitaLogo: typeof import('./src/components/VitaLogo.vue')['default']
     VitaPrice: typeof import('./src/components/VitaPrice.vue')['default']
     VitaProductAdd: typeof import('./src/components/VitaProductAdd.vue')['default']
     VitaProductList: typeof import('./src/components/VitaProductList.vue')['default']
-    VitaRange: typeof import('./src/components/ui/VitaRange.vue')['default']
-    VLogo: typeof import('./src/components/VitaLogo.vue')['default']
   }
 }

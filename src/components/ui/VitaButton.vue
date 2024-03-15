@@ -1,7 +1,5 @@
 <script lang="ts">
 import {defineComponent, PropType} from 'vue'
-import Plus from '@/assets/icons/plus-icon.svg'
-
 export default defineComponent({
   name: "VitaButton",
   props:{
@@ -11,7 +9,6 @@ export default defineComponent({
     }
   },
   computed: {
-    Plus,
     btnConfig(){
 
       return{
@@ -23,17 +20,38 @@ export default defineComponent({
 </script>
 
 <template>
-  <v-btn :class="btnConfig.class">
+  <button :class="btnConfig.class">
     <slot/>
-    <v-img :src="Plus"/>
-  </v-btn>
+    <img class="icon" src="/src/assets/icons/plus-icon.svg" alt="+">
+  </button>
 </template>
 
 <style scoped lang="scss">
-  .btn--add{
-    background-color: #30A8FF;
+  .btn--add, .btn--del{
+    background: linear-gradient(180deg, #4FC3F7 0%, #2979FF 100%);
+    width: 162px;
+    height: 34px;
+    outline: none;
+    border: none;
+    border-radius: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    margin-left: auto;
+    box-shadow: 0 2px 4px 0 #78909C5C;
+    color: #FFFFFF;
+    .text{
+      font-size: 15px;
+      font-weight: 300;
+    }
+  }
+  .btn--add:disabled{
+    opacity: 0.5;
   }
   .btn--del{
-    background-color: rebeccapurple;
+    background: #FF5252;
+    .icon{
+      transform: rotate(45deg);
+    }
   }
 </style>
