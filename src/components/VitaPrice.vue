@@ -22,7 +22,7 @@ export default {
     <span class="name" v-if="!hideName">{{product.name}}</span>
     <span class="cost">{{product.cost}} ₽</span>
       <v-slider
-        color="blue"
+        color="#00BCD4"
         thumb-color="white"
         track-color="grey"
         thumb-size="40px"

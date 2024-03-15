@@ -3,13 +3,19 @@ import {defineComponent} from 'vue'
 import {cloneDeep} from "lodash"
 export default defineComponent({
   name: "VitaProductAdd",
+  props: {
+    productCount: {
+      type: Number,
+      required: true
+    }
+  },
   data(){
     return{
       product: {
         name: '',
         cost: 0,
       },
-      products: []
+      products: [],
     }
   },
   computed: {
@@ -34,7 +40,7 @@ export default defineComponent({
     <p class="list">Список добавленных товаров:</p>
     <v-col class="mt-3">
       <v-row class="align-center justify-space-between">
-        <span class="num">{{products.length + 1}}</span>
+        <span class="num">{{productCount}}</span>
         <input
           type="text"
           class="name"
